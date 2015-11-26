@@ -21,6 +21,14 @@ Setting user credentials in the textfield
 browser.text_field(id: 'signup_email').set "username"
 browser.text_field(id: 'signup_password').set "password"
 
+Watir wait
+======================
+
+Watir::Wait.until { }: where you can wait for a block to be true
+object.when_present.set: where you can do something when it’s present
+object.wait_until_present:; where you just wait until something is present
+object.wait_while_present:; where you just wait until something disappears
+
 Radio Buttons
 ================
 
