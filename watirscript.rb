@@ -16,7 +16,6 @@ browser.element(class: "editor-richtext").send_keys "This is my text\t #watir"
 browser.element(class: "create_post_button").click
 browser.goto "jagritgyawali.tumblr.com"
 browser.alert.ok
-
 verification = browser.elements(class: "body-text")
 verification.each do |a| 
   if a.text.match /This is my text/
@@ -26,3 +25,5 @@ verification.each do |a|
 		puts "The post could not be found"
   end
 end
+
+browser.close
