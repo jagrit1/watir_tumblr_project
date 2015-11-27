@@ -9,7 +9,7 @@ end
 def post(browser)
 
   browser.i(class: "icon_post_text").click
-  browser.element(class: "editor-plaintext").send_keys "Hello World!\t"
+  browser.element(class: "editor-plaintext").send_keys "World!\t"
   browser.element(class: "editor-richtext").send_keys "This is my text\t #watir"
   browser.element(class: "create_post_button").click
 end
@@ -31,6 +31,13 @@ verification.each do |a|
   end
   end
 
+end
+ def deletepost(browser)
+  browser.goto "https://www.tumblr.com/blog/jagritgyawali"
+  browser.div(class: "post_control").click
+  browser.div(class: "post_control delete").click
+  browser.button(class: "chrome blue").click
+  puts "The blog has been deleted as well"
 end
 
 def teardown (browser)
