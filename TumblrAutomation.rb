@@ -1,4 +1,6 @@
 module Tumblr
+class TumblrTest
+  
 def login(email, password, browser)
   file = YAML.load_file('./logincredentials.yml')
   browser.text_field(id: 'signup_email').set file["user"][0]["email"]
@@ -42,5 +44,6 @@ end
 
 def teardown (browser)
   browser.close
+end
 end
 end

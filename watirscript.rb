@@ -3,8 +3,7 @@ require 'yaml'
 $LOAD_PATH<<'.'
 require 'TumblrAutomation'
 include Tumblr
-class TumblrTest
-  a = TumblrTest.new
+  a = Tumblr::TumblrTest.new
   browser = Watir::Browser.new :firefox
   browser.goto "https://www.tumblr.com/login"
   file = YAML.load_file('./logincredentials.yml')
@@ -15,4 +14,4 @@ class TumblrTest
   a.navigate(browser)
   a.verification(browser)
   a.teardown(browser)
-end
+
